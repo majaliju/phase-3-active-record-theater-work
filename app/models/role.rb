@@ -9,6 +9,8 @@ class Role < ActiveRecord::Base
     self.auditions.pluck{:location}
   end
 
+   ## this one I need to study
+    ## got via the walk-thru
   def lead
     auditions = self.audition.filter {|audition| audition.hired}
     if audition
@@ -18,6 +20,8 @@ class Role < ActiveRecord::Base
     end
   end
 
+  ## this one I need to study
+  ## got via the walk-thru
   def understudy
     auditions = self.audition.filter {|audition| audition.hired}
 
